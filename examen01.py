@@ -80,7 +80,7 @@ def calificar():
     correcto = False
     for k, v in checkButtons.items():
         if v[1].get():
-            if v[1].get in respuestas:
+            if k in respuestas:
                 correcto = True
             else:
                 correcto = False
