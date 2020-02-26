@@ -79,11 +79,12 @@ def calificar():
         
     correcto = True
     for k, v in checkButtons.items():
-        if v[1].get() and v[1].get() in respuestas:
-            correcto = True
-        elif v[1].get():
-            correcto = False
-            break
+        if v[1].get():
+            if v[1].get in respuestas:
+                correcto = True
+            else:
+                correcto = False
+                break
     if correcto:
         resultado += 20
 
