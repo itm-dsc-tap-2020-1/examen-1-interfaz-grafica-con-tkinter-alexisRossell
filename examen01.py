@@ -19,7 +19,7 @@ indexes = {
         'column': 0
     }
 }
-respuestas = ('10', 'bien', 'cosa1', 'cosa2', 'check1', 'check2')
+respuestas = ('10', 'bien', 'vaso de agua', 'te vas al cielo', 'mucho', 'seleccionar para 20 puntos')
 
 def funcionSalir():
     window.quit()
@@ -86,7 +86,7 @@ def calificar():
             break
     if correcto:
         resultado += 20
-        
+
     seleccionPregunta3 = variablePregunta3.get()
     seleccionPregunta4 = variablePregunta4.get()
     opcion = 1
@@ -109,37 +109,37 @@ nextColumn('window')
 makeEntry(window, 'pregunta2', indexes['window']['row'], indexes['window']['column'])
 wrap('window')
 
-makeLabel(window, 'pregunta3', 'Pregunta 3', indexes['window']['row'], indexes['window']['column'])
+makeLabel(window, 'pregunta3', '¿Como se dice?', indexes['window']['row'], indexes['window']['column'])
 variablePregunta3 = tk.IntVar()
 nextRow('window')
-makeRadioButtons(window, 'cosa1', variablePregunta3, 1, 'cosa1', indexes['window']['row'], indexes['window']['column'])
+makeRadioButtons(window, 'vaso con agua', variablePregunta3, 1, 'vaso con agua', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeRadioButtons(window, 'cosa2', variablePregunta3, 2, 'cosa2', indexes['window']['row'], indexes['window']['column'])
+makeRadioButtons(window, 'vaso de agua', variablePregunta3, 2, 'vaso de agua', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeRadioButtons(window, 'cosa3', variablePregunta3, 3, 'cosa3', indexes['window']['row'], indexes['window']['column'])
+makeRadioButtons(window, 'ninguna', variablePregunta3, 3, 'ninguna', indexes['window']['row'], indexes['window']['column'])
 wrap('window')
 
-makeLabel(window, 'pregunta4', 'Pregunta 4', indexes['window']['row'], indexes['window']['column'])
+makeLabel(window, 'pregunta4', '¿Que pasa despues de la muerte?', indexes['window']['row'], indexes['window']['column'])
 nextRow('window')
 variablePregunta4 = tk.IntVar()
-makeRadioButtons(window, 'cosa1', variablePregunta4, 1, 'cosa1', indexes['window']['row'], indexes['window']['column'])
+makeRadioButtons(window, 'te vas al cielo', variablePregunta4, 1, 'te vas al cielo', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeRadioButtons(window, 'cosa2', variablePregunta4, 2, 'cosa2', indexes['window']['row'], indexes['window']['column'])
+makeRadioButtons(window, 'te vas al infierno', variablePregunta4, 2, 'te vas al infierno', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeRadioButtons(window, 'cosa3', variablePregunta4, 3, 'cosa3', indexes['window']['row'], indexes['window']['column'])
+makeRadioButtons(window, 'nada', variablePregunta4, 3, 'nada', indexes['window']['row'], indexes['window']['column'])
 wrap('window')
 
-makeLabel(window, 'pregunta5', 'Pregunta 5', indexes['window']['row'], indexes['window']['column'])
+makeLabel(window, 'pregunta5', '¿Que tan filosofico fue esto?', indexes['window']['row'], indexes['window']['column'])
 nextRow('window')
-makeCheckButton(window, 'check1', 'Leer', indexes['window']['row'], indexes['window']['column'])
+makeCheckButton(window, 'mucho', 'mucho', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeCheckButton(window, 'check2', 'Peliculas', indexes['window']['row'], indexes['window']['column'])
+makeCheckButton(window, 'poco', 'poco', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeCheckButton(window, 'check3', 'Redes Sociales', indexes['window']['row'], indexes['window']['column'])
+makeCheckButton(window, 'nada', 'nada', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeCheckButton(window, 'check4', 'cosa', indexes['window']['row'], indexes['window']['column'])
+makeCheckButton(window, 'algo', 'algo', indexes['window']['row'], indexes['window']['column'])
 nextColumn('window')
-makeCheckButton(window, 'check5', 'otracosa', indexes['window']['row'], indexes['window']['column'])
+makeCheckButton(window, 'seleccionar para 20 puntos', 'seleccionar para 20 puntos', indexes['window']['row'], indexes['window']['column'])
 wrap('window')
 
 makeButton(window, 'calificar', 'Calificar', calificar, indexes['window']['row'], indexes['window']['column'])
