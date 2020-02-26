@@ -77,11 +77,16 @@ def calificar():
         if v[1].get() and v[1].get() in respuestas:
             resultado += 20
         
+    correcto = True
     for k, v in checkButtons.items():
         if v[1].get() and v[1].get() in respuestas:
-            resultado += 20
+            correcto = True
+        elif v[1].get():
+            correcto = False
             break
-
+    if correcto:
+        resultado += 20
+        
     seleccionPregunta3 = variablePregunta3.get()
     seleccionPregunta4 = variablePregunta4.get()
     opcion = 1
